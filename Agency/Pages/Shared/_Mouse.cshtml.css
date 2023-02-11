@@ -1,0 +1,73 @@
+﻿* {
+    --width: 18px;
+    --scroll-diameter: 4px;
+}
+
+.mouse {
+    position: absolute;
+    width: var(--width);
+    height: 30px;
+    border: 2px solid white;
+    border-radius: 100px;
+    animation: nudgeMouse 2s ease-out infinite;
+    left: calc(50% - var(--width));
+    bottom: 30px;
+}
+
+    .mouse:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        margin: 6px auto 0;
+    }
+
+    .mouse:after {
+        background-color: white;
+        width: var(--scroll-diameter);
+        height: var(--scroll-diameter);
+        border-radius: 100%;
+        animation: trackBallSlide 2s linear infinite;
+    }
+
+@keyframes trackBallSlide {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    20% {
+        opacity: 1;
+        transform: scale(0.9) translateY(10px);
+    }
+
+    40% {
+        opacity: 0;
+        transform: scale(0.4) translateY(22px);
+    }
+
+    60% {
+        opacity: 0;
+        transform: scale(0.4);
+    }
+
+    80% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes nudgeMouse {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(8px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
