@@ -9,6 +9,21 @@
         "css/bootstrap.min.css",
         "css/bootstrap.min.css.map"
       ]
+    },
+    {
+      "library": "jquery@3.6.3",
+      "destination": "wwwroot/lib/jquery/",
+      "files": [
+        "jquery.min.js",
+        "jquery.min.map"
+      ]
+    },
+    {
+      "library": "jqueryui@1.13.2",
+      "destination": "wwwroot/lib/jqueryui/",
+      "files": [
+        "jquery-ui.min.js"
+      ]
     }
   ]
 }
