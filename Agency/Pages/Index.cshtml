@@ -1,2 +1,129 @@
 ﻿@page
 @model IndexModel
+
+<section class="first-slide">
+    <video class="first-slide__background" src="~/videos/background.mp4" autoplay loop muted></video>
+
+    <div class="first-slide__border"></div>
+
+    <header class="first-slide__content first-slide__header">
+        <p>Какой-то классный<br />верхний текст</p>
+        <h1 class="title">Агентство<br />разбитых<br />сердец</h1>
+        <p class="text-end">Матушки,<br />вот это песня</p>
+    </header>
+
+    <partial name="_Mouse" />
+</section>
+
+<section class="slide container">
+
+    <div b-139qmlwk1s="" class="test2 column_first" style="">
+        <header>
+            <h2 b-139qmlwk1s="" class="title">Синдром разбитого сердца</h2>
+        </header>
+
+        <p b-139qmlwk1s="">Предолагается, что сильная боль от разбитого сердца - это часть инстинкта самосохранения.</p>
+        <p b-139qmlwk1s="">
+            В психологии этот термин обозначает сильнейший стресс, после которого включаются защитные механизмы психики,
+            не позволяющие человеку быть счастливым, любить и строить нормальные романтические отношения.
+        </p><a b-139qmlwk1s="" style="
+    border: 1px solid;
+    padding: 12px;
+    display: inline-block;
+    margin-top: 40px;
+">
+            Подробнее
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="
+    fill: #333;
+    display: inline-block;
+    height: 20px;
+    margin-left: 50px;
+    margin-right: 10px;
+">
+                
+                <path d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"></path>
+            </svg>
+        </a>
+    </div>
+    <div class="column column_second">
+        <img class="test1" src="~/images/pngegg.png" style="filter:brightness(40)" />
+    </div>
+
+</section>
+
+<script>
+    $(function () {
+        //$("h1").hide().show("drop", { direction: "left" }, 1500);
+        $("h1").hide().fadeIn();
+        $(".first-slide__border").hide().fadeIn(1500);
+
+        //$(".title").hide().fadeIn();
+        $(".test1").hide().show("drop", { direction: "right" }, 1500); $(".test2").hide().show("drop", { direction: "left" }, 1000);
+    });
+</script>
+
+<style>
+    .slide {
+        height: 100vh;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        overflow-y: clip;
+        justify-content: center;
+        padding: 10vh 0;
+    }
+
+        .slide:not(:last-of-type) {
+            margin-bottom: 38vh;
+        }
+
+    .column_first {
+        z-index: 50;
+    }
+
+    .column_second, .column_third {
+        position: absolute;
+        top: 10vh;
+    }
+
+    @@media (min-width: 768px) {
+        .column_first {
+            width: 80%;
+        }
+
+        .column_second, .column_third {
+            float: left;
+            width: 33.33333333%;
+        }
+
+        .column_second {
+            margin-left: 27.16666667%;
+        }
+
+        .column_third {
+            margin-left: 55%;
+        }
+    }
+
+
+    @@keyframes move{
+        0% {
+            transform: translate(0px, 0px);
+        }
+
+        25% {
+            transform: translate(0px, 10px);
+        }
+
+
+        75% {
+            transform: translate(0px, -10px);
+        }
+    }
+
+
+    .test1 {
+        animation: move 5s ease-in-out infinite;
+    }
+
+</style>
