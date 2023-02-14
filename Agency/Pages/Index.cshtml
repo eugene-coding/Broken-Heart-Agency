@@ -1,55 +1,410 @@
 ﻿@page
 @model IndexModel
 
-<section class="first-slide">
-    <video class="first-slide__background" src="~/videos/background.mp4" autoplay loop muted></video>
+<article id="fullpage">
+    <header class="section header">
+        <div class="header__wrapper">
+            @*   <video class="header__background" data-src="/videos/background.mp4" autoplay loop muted></video>
 
-    <div class="first-slide__border"></div>
+            <svg class="header__canvas header-canvas">
+            <rect class="header-canvas__rectangle" width="66.67%" height="62%"></rect>
+            </svg>*@
 
-    <header class="first-slide__content first-slide__header">
-        <p>Какой-то классный<br />верхний текст</p>
-        <h1 class="title">Агентство<br />разбитых<br />сердец</h1>
-        <p class="text-end">Матушки,<br />вот это песня</p>
+            <div class="header__content">
+                <p>Закрытое <br /> общество</p>
+                <h1 class="title">Длинное <br/> название <br /> страницы</h1>
+                <p class="text-end">Скоро</p>
+            </div>
+
+            <partial name="_Mouse" />
+        </div>
+     
     </header>
 
-    <partial name="_Mouse" />
-</section>
+    <section class="section">123</section>
 
-<section class="slide container">
+    <section class="section">234</section>
 
-    <div b-139qmlwk1s="" class="test2 column_first" style="">
-        <header>
-            <h2 b-139qmlwk1s="" class="title">Синдром разбитого сердца</h2>
+    <section class="section">345</section>
+
+    <section class="section">456</section>
+
+    <section class="section"></section>
+
+    <section class="section"></section>
+</article>
+
+@section scripts {
+    <script>
+        $(document).ready(function () {
+            $('#fullpage').fullpage({
+                //options here
+                autoScrolling: true,
+                scrollHorizontally: true
+            });
+
+            //methods
+          @*  $.fn.fullpage.setAllowScrolling(false);*@
+        });
+    </script>
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@*
+<section class="slide">
+    <div class="slide-wrapper first-slide">
+        <video class="first-slide__background" src="~/videos/background2.mp4" autoplay loop muted></video>
+
+        <div class="first-slide__border"></div>
+
+        <header class="first-slide__content first-slide__header">
+            <p>Закрытая <br />компания</p>
+            <h1 class="title">Агентство <br /><span class="broken">разбитых</span> <br /> сердец</h1>
+            <p class="text-end">Скоро</p>
         </header>
 
-        <p b-139qmlwk1s="">Предолагается, что сильная боль от разбитого сердца - это часть инстинкта самосохранения.</p>
-        <p b-139qmlwk1s="">
-            В психологии этот термин обозначает сильнейший стресс, после которого включаются защитные механизмы психики,
-            не позволяющие человеку быть счастливым, любить и строить нормальные романтические отношения.
-        </p><a b-139qmlwk1s="" style="
-    border: 1px solid;
-    padding: 12px;
-    display: inline-block;
-    margin-top: 40px;
-">
-            Подробнее
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="
-    fill: #333;
-    display: inline-block;
-    height: 20px;
-    margin-left: 50px;
-    margin-right: 10px;
-">
-                
-                <path d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"></path>
-            </svg>
-        </a>
+        <partial name="_Mouse" />
     </div>
-    <div class="column column_second">
-        <img class="test1" src="~/images/pngegg.png" style="filter:brightness(40)" />
-    </div>
-
 </section>
+
+<section class="slide" style="background: url(/images/back-with-people.jpg);
+    background-size: cover;">
+    <div class="slide-wrapper container">
+        <div class="row" style="padding-top:20px; padding-bottom:20px;">
+            <div class="col-7">
+                <header style="    width: 100%;
+    margin-bottom: 34px;">
+                    <h2 class="title" style=" margin-bottom: 16px;letter-spacing: 0.3em;/* font-size: 34px; */">Здравствуй!</h2>
+                    <span b-139qmlwk1s="" style="
+    /* text-align: right; */
+    display: inline-block;
+    font-size: 25px;
+    font-weight: 700;
+">
+                        Что привело тебя в нашу компанию?<br>
+                        Любопытство или разбитое на куски сердце?<br>
+                        В любом случае, мы постараемся тебе помочь.
+                    </span>
+                </header>
+
+                <div style="
+    display: inline-flex;
+    flex-direction: column;
+">
+                    <a class="button  text-black" style="box-shadow: -8px -5px #333;
+    border-radius: 6px;" onclick="document.querySelectorAll('.onepage-pagination a')[2].click()">
+                        Что такое "Агентство Разбитых Сердец"?
+                    </a>
+
+                    <a class="button text-black" style="box-shadow: -8px -5px #333;
+    border-radius: 6px;" href="https://vk.com/hostelberga">
+                        Что такое "Агентство Разбитых Сердец"?
+                    </a>
+
+                    <a class="button  text-black" style="box-shadow: -8px -5px #333;
+    border-radius: 6px;"  href="https://youtube.com/@@hostelberga">
+                        Что такое "Агентство Разбитых Сердец"?
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="col-5">
+                <img class="img-fluid" src="~/images/hr.png" style="    float: right;
+    height: 100%;
+max-height:75vh" />
+            </div>
+        </div>
+
+        <div class="column column_second">
+        </div>
+    </div>
+</section>
+
+
+<section class="slide">
+    <div class="slide-wrapper container">
+        <div class="test2 column_first">
+            <header>
+                <h2 class="title">Агентство Разбитых Сердец</h2>
+            </header>
+
+            <p>
+                Агенство Разбитых Сердец — это независимая организация, не привязанная к конкретному месту на карте.
+            </p>
+
+            <p>
+                Попасть в неё может любой человек, встретивший сложности на своём жизненном пути, но не каждому удаётся
+                без последствий её покинуть.
+            </p>
+        </div>
+
+        <div class="column column_second">
+            <img class="test1" src="~/images/pngegg.png" style="filter:brightness(40)" />
+        </div>
+    </div>
+</section>
+
+
+<section class="slide">
+    <div class="slide-wrapper container">
+        <div class="test2 column_first">
+            <header>
+                <h2 class="title">Чем мы занимаемся?</h2>
+            </header>
+
+            <p>
+                Мы помогаем людям пережить стрессовые ситуации и сильные эмоциями связанные с неудавшейся любовью и не только.
+            </p>
+
+            <p>
+                Мы пытаемся облегчить депрессию, тревогу и, в более тяжелых случаях, посттравматическим стрессовым расстройством, людям с разбитым сердцем.
+            </p>
+        </div>
+
+        <div class="column column_second">
+           
+        </div>
+    </div>
+</section>
+
+<header class="slide">
+    <div class="slide-wrapper container test2 text-center">
+        <h2 class="title">Почему это важно?</h2>
+    </div>
+</header>
+
+<section class="slide">
+    <div class="slide-wrapper container">
+        <div class="test2 column_first">
+            <header>
+                <h2 class="title">Синдром разбитого сердца</h2>
+            </header>
+
+            <p>
+                Синдром разбитого сердца — это заболевание, которое часто вызывается стрессовыми ситуациями и сильными эмоциями.
+            </p>
+
+            <p>
+                В психологии этот термин обозначает сильнейший стресс, после которого включаются защитные механизмы психики,
+                не позволяющие человеку быть счастливым, любить и строить нормальные романтические отношения.
+            </p>
+
+            <p>
+                Неудавшаяся любовь может быть чрезвычайно болезненной. Люди с разбитым сердцем могут страдать депрессией, 
+                тревогой и, в более тяжелых случаях, посттравматическим стрессовым расстройством.
+            </p>
+        </div>
+
+        <div class="column column_second">
+            <img class="test1" src="~/images/pngegg.png" style="filter:brightness(40)" />
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<section class="slide">
+    <div class="slide-wrapper container">
+        <div class="test2 column_first">
+            <header>
+                <h2 class="title">Кардиомиопатия такоцубо</h2>
+            </header>
+
+            <p>
+                Игнорирование проблемы, подавление эмоций может привести к последствиям.
+            </p>
+
+            <p>
+                Кардиомиопатия такоцубо — это преходящая острая сердечная недостаточность, сопровождающаяся расширением верхушки левого желудочка.
+            </p>
+
+            <p>
+                Основные клинические проявления включают резкую загрудинную боль, одышку, тахикардию. Иногда развиваются пресинкопальные состояния и обмороки.
+            </p>
+        </div>
+
+        <div class="column column_second">
+            <img class="test1" src="~/images/pngegg.png" style="filter:brightness(40)" />
+        </div>
+    </div>
+</section>
+
+<section>
+    <header class="slide">
+        <div class="slide-wrapper container test2 text-center">
+            <h2 class="title">Как бороться с разбитым сердцем?</h2>
+            <p class="spacing">Вот несколько советов</p>
+        </div>
+    </header>
+
+    <ul>
+
+        <li class="slide">
+            <div class="slide-wrapper container">
+                <div class="test2 column_first">
+                    <div>
+                        <strong class="title">Не держите в себе эмоции</strong>
+                        <p>Выражение эмоций отлично уменьшает количество стресса в организме.</p>
+                    </div>
+
+                    <div>
+                        <strong class="title">Соблюдайте режим сна</strong>
+                        <p>Если вам нужны лекарства, чтобы помочь вам уснуть, изменить настроение или управлять сердцем, не стыдитесь - вы переживаете значительный стресс.</p>
+                    </div>
+                </div>
+
+                <div class="column_second">
+                </div>
+            </div>
+        </li>
+
+        <li class="slide">
+            <div class="slide-wrapper container">
+                <div class="test2 column_first">
+                    <strong class="title">Соблюдайте режим сна</strong>
+                    <p>Если вам нужны лекарства, чтобы помочь вам уснуть, изменить настроение или управлять сердцем, не стыдитесь - вы переживаете значительный стресс.</p>
+                </div>
+
+                <div class="column_second">
+                </div>
+            </div>
+        </li>
+
+        <li class="slide">
+            <div class="slide-wrapper container">
+                <div class="test2 column_first">
+                    <strong class="title">Больше двигайтесь</strong>
+                    <p>
+                        Разбитое сердце заставляет многих людей чувствовать ошеломление, замкнутость.
+                    </p>
+
+                    <p>
+                        Двигайтесь. Вставайте с кровати. Примите душ. Погуляйте на улице. Подышите свежим воздухом и почувствуйте лучи солнца на своём лице.
+                    </p>
+                </div>
+
+                <div class="column_second">
+                </div>
+            </div>
+        </li>
+
+        <li class="slide">
+            <div class="slide-wrapper container">
+                <div class="test2 column_first">
+                    <strong class="title">Ограничьте себя от лишних эмоций</strong>
+                    <p>
+                        Если чувствуете себя разбитым, то постарайтесь отгородить себя от лишних эмоций.
+                        Это ни в коем случае не значит, что нужно полностью отгорождаться от людей.
+                    </p>
+                    <p>
+                        Попробуйте понять, общение с какими людьми может вам помочь, оказать поддержку, а какие - могут быть слишком обременительны.
+                    </p>
+                </div>
+
+                <div class="column_second">
+                </div>
+            </div>
+        </li>
+
+
+        <li class="slide">
+            <div class="slide-wrapper container">
+                <div class="test2 column_first">
+                    <strong class="title">Ограничьте себя от лишних эмоций</strong>
+                    <p>
+                        Если чувствуете себя разбитым, то постарайтесь отгородить себя от лишних эмоций.
+                        Это ни в коем случае не значит, что нужно полностью отгорождаться от людей.
+                    </p>
+                    <p>
+                        Попробуйте понять, общение с какими людьми может вам помочь, оказать поддержку, а какие - могут быть слишком обременительны.
+                    </p>
+                </div>
+
+                <div class="column_second">
+                </div>
+            </div>
+        </li>
+    </ul>
+</section>
+
+<section class="slide">
+    <div class="slide-wrapper container">
+        <div class="test2 column_first">
+            <header>
+                <h2 class="title">
+                    Поделитесь своей историей <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        здесь
+                    </button>
+                </h2>
+            </header>
+        </div>
+
+
+
+        <div class="column column_second">
+        </div>
+    </div>
+</section>
+
+
+<section id="song" class="slide text-white" style="    position: absolute;
+    top: 800%;
+    left: 0px;
+    background: url(/images/cover2.jpg);
+    background-size: cover;">
+
+    <div class="blur-background"></div>
+
+    <div class="slide-wrapper slide-wrapper_blur container">
+        <div class="test2 ">
+            <h2 class="title">хостел -<br />агентство разбитых сердец</h2>
+            <p>
+                Текст о том, что мы написали эту песню, чтобы обратить большее внимание к данной проблеме. Будем рады, если подпишитесь и будете следить.
+            </p>
+            <div>
+                <a class="button text-white" href="https://yandex.ru">
+                    Слушать
+                </a>
+
+                <a class="button text-white" href="https://vk.com/hostelberga">
+                    ВКонтакте
+                </a>
+
+                <a class="button text-white" href="https://youtube.com/@@hostelberga">
+                    YouTube
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="slide" style="background-color: #333">
+    <div class="slide-wrapper container test2 text-center text-white">
+        <h2 class="title">Об этом нужно говорить</h2>
+        <p class="spacing">Какой-либо текст, рассказывающий о том, что не стоит держать эмоции в себе, так как это до добра не доведёт, и что нет ничего страшного, если ты обратишься к психологу.</p>
+    </div>
+</footer>
+
 
 <script>
     $(function () {
@@ -62,68 +417,7 @@
     });
 </script>
 
-<style>
-    .slide {
-        height: 100vh;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        overflow-y: clip;
-        justify-content: center;
-        padding: 10vh 0;
-    }
-
-        .slide:not(:last-of-type) {
-            margin-bottom: 38vh;
-        }
-
-    .column_first {
-        z-index: 50;
-    }
-
-    .column_second, .column_third {
-        position: absolute;
-        top: 10vh;
-    }
-
-    @@media (min-width: 768px) {
-        .column_first {
-            width: 80%;
-        }
-
-        .column_second, .column_third {
-            float: left;
-            width: 33.33333333%;
-        }
-
-        .column_second {
-            margin-left: 27.16666667%;
-        }
-
-        .column_third {
-            margin-left: 55%;
-        }
-    }
-
-
-    @@keyframes move{
-        0% {
-            transform: translate(0px, 0px);
-        }
-
-        25% {
-            transform: translate(0px, 10px);
-        }
-
-
-        75% {
-            transform: translate(0px, -10px);
-        }
-    }
-
-
-    .test1 {
-        animation: move 5s ease-in-out infinite;
-    }
-
-</style>
+@section scripts{
+   
+}
+*@

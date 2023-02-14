@@ -5,6 +5,8 @@ public class IndexModel : PageModel
 {
     public void OnGet()
     {
+        var random = new Random();
 
+        ViewData["Value"] = random.Next(1000, 9999);
     }
 }
